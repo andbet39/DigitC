@@ -1,0 +1,37 @@
+<ion-view >
+
+    <ion-content  scroll="false">
+
+
+        <div id="content">
+
+            <div id="image-render" >
+                <img ng-show="finalImg !== null" ng-src="{{finalImg}}"  height="200px" style="margin-top:20%;">
+                <img ng-show="finalImg === null" ng-src="img/960.png" height="200px" style="margin-top:20%;">
+
+            </div>
+            <p>
+
+                <a ng-href="#" class="hvr-grow" ng-click="applyLogo('win')" style="margin-top: 20px">
+                    <img ng-src="img/epic-win-btn.png"   class="page-element"  alt="submit" />
+                </a>
+
+            </p>
+
+            <p>
+
+                <a ng-href="#" class="hvr-grow"  ng-click="applyLogo('fail')" style="margin-top: 20px">
+                    <img ng-src="img/epic-fail-btn.png"   class="page-element"  alt="submit" />
+                </a>
+
+            </p>
+
+            <a ng-href="#" class="hvr-grow" ng-click="drawPic()">
+                Test
+            </a>
+        </div>
+
+
+    </ion-content>
+</ion-view>
+<canvas  id='photoCanvas' ></canvas>

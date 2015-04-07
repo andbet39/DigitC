@@ -1,0 +1,42 @@
+/* Empty. Add your own CSS if you like */
+
+
+@font-face {
+    font-family: 'rockwell';
+    src: url('fonts/ROCK.TTF') format('truetype');
+    font-weight: 100;
+
+}
+
+body{
+
+}
+
+.pane {
+    background-color: #eee9db;
+ }
+#content{
+    text-align: center;
+
+}
+
+input[type="text"]{
+    display: inline;
+    text-align: center;
+    color: #757679;
+    background-color: transparent;
+    font-size: 1.5em;
+}
+
+.txt{
+    font-family: 'rockwell';
+    color: #757679  ;
+
+}
+#content .page-element {
+    text-align: center;
+    width: 70%
+
+}
+
+
