@@ -22,5 +22,5 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
       var imgW=960;
       var imgH=1280;
 
-      var txtpH = 0.90;
+      var txtpH = 0.87;
       var logopH=0.73

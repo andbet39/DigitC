@@ -138,19 +138,17 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
 
 
                     context.font = '100px impact';
-                    context.font = '100px impact';
 
                     textWidth = context.measureText($scope.frase).width;
 
                     if (textWidth > canvas.offsetWidth) {
-                        context.font = '60px impact';
-                        context.font = '60px impact';
-                    }
+                        context.font = '65px impact';
+                     }
 
                     context.textAlign = 'center';
                     context.fillStyle = 'white';
 
-                    wrapText(context, $scope.frase, canvas.offsetWidth / 2, canvas.offsetHeight * txtpH, canvas.offsetWidth - 20, 65);
+                    wrapText(context, $scope.frase, canvas.offsetWidth / 2, canvas.offsetHeight * txtpH, canvas.offsetWidth - 20, 75);
 
 
 
@@ -263,13 +261,13 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
             textWidth = context.measureText($scope.frase).width;
 
             if (textWidth > canvas.offsetWidth) {
-                context.font = "60px impact";
+                context.font = "65px impact";
             }
 
             context.textAlign = 'center';
             context.fillStyle = 'white';
 
-            wrapText(context, $scope.frase, canvas.offsetWidth / 2, canvas.offsetHeight * txtpH, canvas.offsetWidth - 20, 65);
+            wrapText(context, $scope.frase, canvas.offsetWidth / 2, canvas.offsetHeight * txtpH, canvas.offsetWidth - 20, 75);
 
 
             var imgURI= canvas.toDataURL("image/jpeg");
