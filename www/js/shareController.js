@@ -20,7 +20,7 @@ app.controller("shareController", function($scope,$rootScope,$state, $ionicModal
         var image = $rootScope.finalImg;
 
         $cordovaSocialSharing
-            .shareViaEmail($rootScope.frase, $rootScope.subject,['digit@digit.com'], [], [], image);
+            .shareViaEmail($rootScope.frase, $rootScope.subject,['raccontaci@digitalchampions.it'], [], [], image);
 
 
     }
