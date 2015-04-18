@@ -46,9 +46,6 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
 
 
 
-
-
-
     $ionicModal.fromTemplateUrl('photo.html', {
         scope: $scope,
         animation: 'slide-in-up'
@@ -114,7 +111,7 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
                 targetWidth: imgW,
                 targetHeight: imgH,
                 popoverOptions: CameraPopoverOptions,
-                saveToPhotoAlbum: true
+                saveToPhotoAlbum: false
             };
 
 
@@ -124,6 +121,8 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
 
                 var canvas = document.getElementById('photoCanvas');
                 var context = canvas.getContext('2d');
+                $scope.resizeCanvas();
+
                 context.clearRect(0, 0, canvas.width, canvas.height);
 
                 var imageObj = new Image();
@@ -137,17 +136,22 @@ app.controller("messageController", function($scope,$state, $ionicModal,$rootSco
                         0, 0, canvas.width, canvas.height);
 
 
-                    context.font = "100px Impact";
+
+                    context.font = '100px impact';
+                    context.font = '100px impact';
+
                     textWidth = context.measureText($scope.frase).width;
 
                     if (textWidth > canvas.offsetWidth) {
-                        context.font = "60px Impact";
+                        context.font = '60px impact';
+                        context.font = '60px impact';
                     }
 
                     context.textAlign = 'center';
                     context.fillStyle = 'white';
 
                     wrapText(context, $scope.frase, canvas.offsetWidth / 2, canvas.offsetHeight * txtpH, canvas.offsetWidth - 20, 65);
+
 
 
                     var imgURI = canvas.toDataURL("image/jpeg");

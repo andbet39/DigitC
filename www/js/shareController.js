@@ -10,9 +10,19 @@ app.controller("shareController", function($scope,$rootScope,$state, $ionicModal
 
     $scope.shareAnywhere = function() {
 
-        var image = $scope.finalImg;
+        var image = $rootScope.finalImg;
         $cordovaSocialSharing.share($rootScope.frase, $rootScope.subject, image, "http://digitalchampions.it");
     }
 
+    $scope.shareViaMail = function() {
+    console.log('shareViamail');
+
+        var image = $rootScope.finalImg;
+
+        $cordovaSocialSharing
+            .shareViaEmail($rootScope.frase, $rootScope.subject,['digit@digit.com'], [], [], image);
+
+
+    }
 
 });
